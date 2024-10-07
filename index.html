@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Avanzada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora Avanzada</h2>
+
+        <!-- Sección de Calculadora Básica -->
+        <div class="section">
+            <h3>Calculadora Básica</h3>
+            <div class="calculator">
+                <input type="text" id="calculatorDisplay" readonly>
+                <div class="buttons">
+                    <button class="btn" data-value="7">7</button>
+                    <button class="btn" data-value="8">8</button>
+                    <button class="btn" data-value="9">9</button>
+                    <button class="btn operator" data-value="/">÷</button>
+
+                    <button class="btn" data-value="4">4</button>
+                    <button class="btn" data-value="5">5</button>
+                    <button class="btn" data-value="6">6</button>
+                    <button class="btn operator" data-value="*">×</button>
+
+                    <button class="btn" data-value="1">1</button>
+                    <button class="btn" data-value="2">2</button>
+                    <button class="btn" data-value="3">3</button>
+                    <button class="btn operator" data-value="-">−</button>
+
+                    <button class="btn" data-value="0">0</button>
+                    <button class="btn" data-value=".">.</button>
+                    <button class="btn" id="clear">C</button>
+                    <button class="btn operator" data-value="+">+</button>
+
+                    <button class="btn equals" id="equals">=</button>
+                </div>
+            </div>
+            <p id="basicResult"></p>
+        </div>
+
+        <!-- Sección de Distancia entre dos puntos -->
+        <div class="section">
+            <h3>Distancia entre dos puntos</h3>
+            <label for="x1">X1:</label>
+            <input type="number" id="x1">
+            <label for="y1">Y1:</label>
+            <input type="number" id="y1">
+            <label for="x2">X2:</label>
+            <input type="number" id="x2">
+            <label for="y2">Y2:</label>
+            <input type="number" id="y2">
+            <button id="calculateDistance">Calcular Distancia</button>
+            <p id="distanceResult"></p>
+        </div>
+
+        <!-- Sección de Raíces de Polinomio -->
+        <div class="section">
+            <h3>Raíces de Polinomio</h3>
+            <label for="polynomial">Coeficientes (a, b, c, d, e):</label>
+            <input type="text" id="polynomial" placeholder="Ej: 1,-3,2,0,0 para x^4 - 3x^3 + 2x^2">
+            <label for="lowerBound">Límite Inferior:</label>
+            <input type="number" id="lowerBound">
+            <label for="upperBound">Límite Superior:</label>
+            <input type="number" id="upperBound">
+            <button id="findRoots">Encontrar Raíces</button>
+            <p id="rootsResult"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
